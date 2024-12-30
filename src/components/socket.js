@@ -4,7 +4,7 @@ let socket;
 
 export const initializeSocket = () => {
   if (!socket) {
-    socket = io("http://localhost:5000");
+    socket = io("https://borasocialapp-backend.onrender.com");
 
     socket.on("connect", () => {
       console.log("Connected to socket:", socket.id);

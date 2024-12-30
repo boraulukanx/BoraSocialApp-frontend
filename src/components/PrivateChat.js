@@ -99,7 +99,7 @@ const PrivateChat = ({ userId }) => {
               {msg.sender._id !== userId && (
                 <div className="message-avatar-wrapper">
                   <img
-                    src={`http://localhost:5000${
+                    src={`https://borasocialapp-backend.onrender.com${
                       msg.sender.profilePicture || "/uploads/default-avatar.png"
                     }`}
                     alt={msg.sender.username}
