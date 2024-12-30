@@ -33,7 +33,7 @@ const FollowersPage = () => {
                 onClick={() => navigate(`/profile/${user._id}`)}
               >
                 <img
-                  src={`http://localhost:5000${
+                  src={`https://borasocialapp-backend.onrender.com${
                     user.profilePicture || "/uploads/default-avatar.png"
                   }`}
                   alt={user.username}
