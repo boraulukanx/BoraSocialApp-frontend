@@ -468,7 +468,7 @@ const MapPage = () => {
               key={user._id}
               position={userPosition}
               icon={createUserIcon(
-                `http://localhost:5000${user.profilePicture}`
+                `https://borasocialapp-backend.onrender.com${user.profilePicture}`
               )}
               eventHandlers={{
                 click: () => setFocusedPosition(userPosition), // Zoom in on user marker
