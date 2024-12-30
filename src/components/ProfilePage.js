@@ -256,7 +256,7 @@ const ProfilePage = () => {
         {/* User Profile Section */}
         <div className="profile-section">
           <img
-            src={`http://localhost:5000${
+            src={`https://borasocialapp-backend.onrender.com${
               user.profilePicture || "/default.png"
             }`}
             alt="Profile"
