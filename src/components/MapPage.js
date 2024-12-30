@@ -486,7 +486,7 @@ const MapPage = () => {
                   <strong style={{ color: "#ffcc00" }}>{user.username}</strong>
                   <br />
                   <img
-                    src={`http://localhost:5000${
+                    src={`https://borasocialapp-backend.onrender.com${
                       user.profilePicture || "https://via.placeholder.com/150"
                     }`}
                     alt={user.username}
@@ -598,7 +598,7 @@ const MapPage = () => {
                   onClick={() => navigate(`/profile/${user._id}`)}
                 >
                   <img
-                    src={`http://localhost:5000${
+                    src={`https://borasocialapp-backend.onrender.com${
                       user.profilePicture || "/default.png"
                     }`}
                     alt={user.username}
@@ -655,7 +655,7 @@ const MapPage = () => {
                   className="list-item"
                 >
                   <img
-                    src={`http://localhost:5000${
+                    src={`https://borasocialapp-backend.onrender.com${
                       user.profilePicture || "/default.png"
                     }`}
                     alt={user.username}
