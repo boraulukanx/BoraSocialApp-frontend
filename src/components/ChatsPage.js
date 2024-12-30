@@ -103,7 +103,7 @@ const ChatsPage = ({ userId }) => {
               >
                 <div className="user-info">
                   <img
-                    src={`http://localhost:5000${
+                    src={`https://borasocialapp-backend.onrender.com${
                       user.profilePicture || "/default.png"
                     }`}
                     alt={user.username}
