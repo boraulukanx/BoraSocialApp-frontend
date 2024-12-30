@@ -36,7 +36,6 @@ const AppContent = ({ userId, socketInitialized }) => {
       {!isAuthRoute && <Topbar />}
       {!isAuthRoute && <Sidebar />}
       <div className={`main-content ${isAuthRoute ? "auth-content" : ""}`}>
-  <Router>
         <Routes>
           <Route path="/" element={<Auth />} />
           <Route path="/register" element={<Auth />} />
@@ -74,7 +73,6 @@ const AppContent = ({ userId, socketInitialized }) => {
             element={<CreateEvent userId={userId} />}
           />
         </Routes>
-              </Router>
       </div>
     </div>
   );
