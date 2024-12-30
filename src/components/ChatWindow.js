@@ -108,7 +108,7 @@ const ChatWindow = ({ eventId, userId }) => {
           <div key={index} style={{ marginBottom: "10px" }}>
             <div style={{ display: "flex", alignItems: "center" }}>
               <img
-                src={`http://localhost:5000${
+                src={`https://borasocialapp-backend.onrender.com${
                   msg.sender.profilePicture || "/uploads/default-avatar.png"
                 }`}
                 alt={msg.sender.username}
