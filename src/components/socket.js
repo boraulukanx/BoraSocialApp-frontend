@@ -4,7 +4,7 @@ let socket;
 
 export const initializeSocket = () => {
   if (!socket) {
-    socket = io("https://borasocialapp-backend.onrender.com");
+    socket = io("https://borasocialapp2024-backend.onrender.com");
 
     socket.on("connect", () => {
       console.log("Connected to socket:", socket.id);
