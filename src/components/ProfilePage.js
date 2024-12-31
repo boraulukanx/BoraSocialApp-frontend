@@ -228,7 +228,8 @@ const ProfilePage = () => {
     setSelectedFile(e.target.files[0]);
   };
 
-  const handleProfilePictureUpdate = async () => {
+  
+  /*const handleProfilePictureUpdate = async () => {
     if (!selectedFile) return alert("Please select a file first.");
     const formData = new FormData();
     formData.append("profilePicture", selectedFile);
@@ -242,7 +243,41 @@ const ProfilePage = () => {
       console.error("Error updating profile picture:", err);
       alert("Failed to update profile picture.");
     }
+  };*/
+
+  const handleProfilePictureUpdate = async () => {
+    if (!selectedFile) {
+      alert("Please select a file first.");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("profilePicture", selectedFile);
+    formData.append("userId", userId);
+
+    try {
+      const response = await fetch(
+        `https://borasocialapp-backend.onrender.com/${id}/profilePicture`,
+        {
+          method: "PUT",
+          body: formData,
+        }
+      );
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setUser(data.updatedUser); // Update user profile state
+        alert("Profile picture updated successfully!");
+      } else {
+        alert(`Failed to update profile picture: ${data.message}`);
+      }
+    } catch (err) {
+      console.error("Error updating profile picture:", err);
+      alert("An error occurred while updating your profile picture.");
+    }
   };
+
 
   const loadMoreEvents = () => {
     setVisibleEvents((prev) => prev + 5);
